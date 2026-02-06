@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Responsive Image Gallery</h1>
+
+    <div class="buttons">
+        <button onclick="filterImages('all')">All</button>
+        <button onclick="filterImages('nature')">Nature</button>
+        <button onclick="filterImages('temple')">Temple</button>
+    </div>
+
+    <div class="gallery">
+        <!-- Nature -->
+        <img src="img/nature1.png" class="image nature" onclick="openLightbox(this)">
+        <img src="img/nature2.png" class="image nature" onclick="openLightbox(this)">
+        <img src="img/nature3.png" class="image nature" onclick="openLightbox(this)">
+        <img src="img/nature4.png" class="image nature" onclick="openLightbox(this)">
+        <img src="img/nature5.png" class="image nature" onclick="openLightbox(this)">
+        <img src="img/nature6.png" class="image nature" onclick="openLightbox(this)">
+
+        <!-- Temple -->
+        <img src="img/temple1.png" class="image temple" onclick="openLightbox(this)">
+        <img src="img/temple2.png" class="image temple" onclick="openLightbox(this)">
+        <img src="img/temple3.png" class="image temple" onclick="openLightbox(this)">
+        <img src="img/temple4.png" class="image temple" onclick="openLightbox(this)">
+        <img src="img/temple5.png" class="image temple" onclick="openLightbox(this)">
+        <img src="img/temple6.png" class="image temple" onclick="openLightbox(this)">
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox">
+        <span class="close" onclick="closeLightbox()">×</span>
+        <button class="prev" onclick="changeImage(-1)">❮</button>
+        <img id="lightbox-img">
+        <button class="next" onclick="changeImage(1)">❯</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
